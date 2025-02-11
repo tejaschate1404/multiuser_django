@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HR Dashboard</title>
+</head>
+<body>
+    <h2>Welcome, HR {{ request.user.username }}</h2>
+    <p>Company: {{ request.user.hr_profile.company_name }}</p>
+    <img src="{{ request.user.hr_profile.image.url }}" alt="HR Profile Picture" width="150"><br>
+
+    <a href="{% url 'hr_logout' %}">Logout</a>
+</body>
+</html>
